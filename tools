@@ -112,7 +112,7 @@ gmail
 web_fetch의 "특정 URL 패치"는 웹페이지의 전체 HTML 콘텐츠를 가져오는 것을 의미합니다. 라이브러리가 아니라 HTTP GET 요청을 보내서 해당 URL의 원본 소스코드를 받아오는 기능입니다.
 하지만 도구들의 실제 소스코드는 제가 직접 접근할 수 없습니다. 제가 가진 정보는 시스템 지시사항에서 제공된 함수 시그니처와 설명뿐입니다.
 각 도구의 더 자세한 작동 방식을 설명해드리겠습니다:
-<img width="728" height="470" alt="Image" src="https://github.com/user-attachments/assets/8c06314f-5807-4eb7-b34c-de766ac384b0" />
+<img width="754" height="487" alt="Image" src="https://github.com/user-attachments/assets/5bf096f1-7076-4212-aa87-b8d94795bab4" />
 
 - lucide-react@0.263.1: `import { Camera } from "lucide-react"`
 - recharts: `import { LineChart, XAxis, ... } from "recharts"`
