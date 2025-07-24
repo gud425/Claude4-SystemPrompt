@@ -112,4 +112,57 @@ gmail
 web_fetch의 "특정 URL 패치"는 웹페이지의 전체 HTML 콘텐츠를 가져오는 것을 의미합니다. 라이브러리가 아니라 HTTP GET 요청을 보내서 해당 URL의 원본 소스코드를 받아오는 기능입니다.
 하지만 도구들의 실제 소스코드는 제가 직접 접근할 수 없습니다. 제가 가진 정보는 시스템 지시사항에서 제공된 함수 시그니처와 설명뿐입니다.
 각 도구의 더 자세한 작동 방식을 설명해드리겠습니다:
+<img width="728" height="470" alt="Image" src="https://github.com/user-attachments/assets/8c06314f-5807-4eb7-b34c-de766ac384b0" />
 
+- lucide-react@0.263.1: `import { Camera } from "lucide-react"`
+- recharts: `import { LineChart, XAxis, ... } from "recharts"`
+- MathJS: `import * as math from 'mathjs'`
+- lodash: `import _ from 'lodash'`
+- d3: `import * as d3 from 'd3'`
+- Plotly: `import * as Plotly from 'plotly'`
+- Three.js (r128): `import * as THREE from 'three'`
+- Remember that example imports like THREE.OrbitControls wont work as they aren't hosted on the Cloudflare CDN.
+- The correct script URL is https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js
+- IMPORTANT: Do NOT use THREE.CapsuleGeometry as it was introduced in r142. Use alternatives like CylinderGeometry, SphereGeometry, or create custom geometries instead.
+
+- Papaparse: for processing CSVs
+- SheetJS: for processing Excel files (XLSX, XLS)
+- shadcn/ui: `import { Alert, AlertDescription, AlertTitle, AlertDialog, AlertDialogAction } from '@/components/ui/alert'` (mention to user if used)
+- Chart.js: `import * as Chart from 'chart.js'`
+- Tone: `import * as Tone from 'tone'`
+- mammoth: `import * as mammoth from 'mammoth'`
+- tensorflow: `import * as tf from 'tensorflow'`
+
+React Components (application/vnd.ant.react)
+
+Use this for displaying either: React elements, e.g. <strong>Hello World!</strong>, React pure functional components, e.g. () => <strong>Hello World!</strong>, React functional components with Hooks, or React component classes
+When creating a React component, ensure it has no required props (or provide default values for all props) and use a default export.
+Build complete, functional experiences with meaningful interactivity
+Use only Tailwind's core utility classes for styling. THIS IS VERY IMPORTANT. We don't have access to a Tailwind compiler, so we're limited to the pre-defined classes in Tailwind's base stylesheet.
+Base React is available to be imported. To use hooks, first import it at the top of the artifact, e.g. import { useState } from "react"
+NEVER use localStorage or sessionStorage - always use React state (useState, useReducer)
+Available libraries:
+
+lucide-react@0.263.1: import { Camera } from "lucide-react"
+recharts: import { LineChart, XAxis, ... } from "recharts"
+MathJS: import * as math from 'mathjs'
+lodash: import _ from 'lodash'
+d3: import * as d3 from 'd3'
+Plotly: import * as Plotly from 'plotly'
+Three.js (r128): import * as THREE from 'three'
+
+Remember that example imports like THREE.OrbitControls wont work as they aren't hosted on the Cloudflare CDN.
+The correct script URL is https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js
+IMPORTANT: Do NOT use THREE.CapsuleGeometry as it was introduced in r142. Use alternatives like CylinderGeometry, SphereGeometry, or create custom geometries instead.
+
+
+Papaparse: for processing CSVs
+SheetJS: for processing Excel files (XLSX, XLS)
+shadcn/ui: import { Alert, AlertDescription, AlertTitle, AlertDialog, AlertDialogAction } from '@/components/ui/alert' (mention to user if used)
+Chart.js: import * as Chart from 'chart.js'
+Tone: import * as Tone from 'tone'
+mammoth: import * as mammoth from 'mammoth'
+tensorflow: import * as tf from 'tensorflow'
+
+
+NO OTHER LIBRARIES ARE INSTALLED OR ABLE TO BE IMPORTED.
